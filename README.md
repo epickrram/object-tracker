@@ -15,7 +15,6 @@ Usage
 Download the bundle with dependencies from the download page, and unzip. Add the following arguments to the command line when starting java:
 
     -javaagent:./object-tracker-agent-0.1/object-tracker-agent-0.1.jar
-
     -cp ./object-tracker-agent-0.1/javassist.jar:./object-tracker-agent-0.1/juxtapose-1.0.jar
 
 Opening jconsole, look for the MBean named `com.epickrram.tools:type=ObjectInstanceCounter`. To write object count data to disk, invoke the `dumpObjectCreationCounts` method, supplying a target filename.
@@ -36,8 +35,13 @@ You must specify at least an inclusion filter to tell Object-tracker what classe
 
 Specify a system property `com.epickrram.tool.object-tracker.config.file` that points to  a properties file with the following entries:
 
-*`com.epickrram.tool.object-tracker.config.include` Semi-colon separated regexes to specify classes to include (e.g. `com.mycompany;com.external.library`)
-*`com.epickrram.tool.object-tracker.config.exclude` Semi-colon separated regexes to specify classes to exclude
+* `com.epickrram.tool.object-tracker.config.include` 
+
+Semi-colon separated regexes to specify classes to include (e.g. `com.mycompany;com.external.library`)
+
+* `com.epickrram.tool.object-tracker.config.exclude` 
+
+Semi-colon separated regexes to specify classes to exclude
 
 Configuration by property
 -------------------------
@@ -53,5 +57,5 @@ Dependencies
 ------------
 
 Object-tracker uses:
-  * [https://github.com/epickrram/juxtapose juxtapose] for MBean management
-  * [http://www.jboss.org/javassist javassist] for byte-code manipulation
+  * [juxtapose](https://github.com/epickrram/juxtapose) for MBean management
+  * [javassist](http://www.jboss.org/javassist) for byte-code manipulation
