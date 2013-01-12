@@ -31,17 +31,14 @@ Configuration
 
 You must specify at least an inclusion filter to tell Object-tracker what classes to track.
 
-=== Configuration by file ===
+Configuration by file
+---------------------
 
 Specify a system property `com.epickrram.tool.object-tracker.config.file` that points to  a properties file with the following entries:
 
-* `com.epickrram.tool.object-tracker.config.include` 
+* `com.epickrram.tool.object-tracker.config.include` Semi-colon separated regexes to specify classes to include (e.g. `com.mycompany;com.external.library`)
 
-Semi-colon separated regexes to specify classes to include (e.g. `com.mycompany;com.external.library`)
-
-* `com.epickrram.tool.object-tracker.config.exclude` 
-
-Semi-colon separated regexes to specify classes to exclude
+* `com.epickrram.tool.object-tracker.config.exclude` Semi-colon separated regexes to specify classes to exclude
 
 Configuration by property
 -------------------------
